@@ -1,0 +1,38 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package W06;
+
+import java.util.Random;
+
+/**
+ *
+ * @author User
+ */
+public class W06E05 {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        // TODO code application logic here
+        char[] genderType = {'M', 'F'};
+
+        char[] students = new char[100];
+
+        Random rand = new Random();
+        int femaleCount = 0;
+
+        for (int i = 0; i < students.length; i++) {
+            students[i] = genderType[rand.nextInt(2)];
+
+            if (students[i] == 'F') {
+                femaleCount++;
+            }
+        }
+
+        System.out.println("Total female students: " + femaleCount);
+    }
+    
+}
